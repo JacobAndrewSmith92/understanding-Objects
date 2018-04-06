@@ -101,15 +101,50 @@ Mission statement
 URL for registering to vote
 
 */ 
+// Object to hold representative name, district campaigning for, biography, image gallery (head shot, family picture, picture of constituents)
 
-const congressionalDistrict = Object.create({}, {
-    district: {
-        enumerable: true,
-        writable: false,
-        value: "5th"
+const representativesInfo = Object.create({}, {
+    repOne: {
+        name: {
+            enumerable: true,
+            writable: false,
+            value: "Elizabeth Sanger"
+        },
+        districtRunning: {
+            enumerable: true,
+            writable: false,
+            value: "5th"
+        },
+        biography: {
+            enumerable: true,
+            writable: false,
+            value: "Inspiring biography here. Tons of hurdles and trials to overcome..."
+        },
+        imageGallery: {
+            headShot: {
+                enumerable: true,
+                writable: false,
+                value: "https://www.pinterest.com/pin/92464598576802455/"
+            },
+            familyPhoto: {
+                enumerable: true,
+                writable: false,
+                value: "http://runt-of-the-web.com/awkward-family-photos"
+            },
+            constituents: {
+                enumerable: true,
+                writable: false,
+                value: "https://www.cbsnews.com/news/house-republicans-on-recess-face-angry-constituents-at-local-town-halls/"
+            }
+        },
+        missionStatement: {
+            enumerable: true,
+            writable: false,
+            value: "Inspring mission statement here"
+        }
     }
 })
-
+// Object that holds Campaign message and statements
 const platformStatements = Object.create({}, {
     taxes: {
         enumerable: true,
@@ -137,17 +172,22 @@ const platformStatements = Object.create({}, {
         value: "Profound statement on crime and reinforcement - Succulents schlitz hot chicken, mumblecore affogato 90's cold-pressed thundercats poutine roof party irony vegan cred. Farm-to-table tumblr forage, drinking vinegar skateboard pour-over pork belly vice wayfarers dreamcatcher scenester vaporware disrupt synth. Seitan master cleanse gluten-free, cardigan ennui street art adaptogen twee 8-bit kinfolk semiotics jean shorts vexillologist." 
     }
 })
-
-const urlForDonationsForms = Object.create({}, {
-    url: {
+// Object to hold website for donation forms & register to vote
+const urls = Object.create({}, {
+    donationForms: {
         enumerable: true, 
         writable: false,
         value: "www.mywebsitefordistrict.com"
+    },
+    registerToVote: {
+        enumerable: true,
+        writable: false,
+        value: "www.anotherwebsitetoregister.com"
     }
 })
-
+// Empty array to hold date of events
 const calendarOfEvents = [];
-
+// Object representing events on the calendar
 const events = Object.create({}, {
     eventOne: {
         dateCreated: {
@@ -180,7 +220,7 @@ const events = Object.create({}, {
         venue: {
             enumerable: true,
             writable: false,
-            value: ""
+            value: "Capitol Building"
         },
         demographic: {
             enumerable: true,
@@ -190,7 +230,7 @@ const events = Object.create({}, {
         platformStatement: {
             enumerable: true,
             writable: false,
-            value: platformStatements.jobs.value
+            value: platformStatements.value
         }
     },
     eventThree: {
@@ -216,11 +256,66 @@ const events = Object.create({}, {
             }            
     }
 })
+// Empty arrays to hold values from objects
+const volName = [];
+const volAddress = [];
+const volEmail = [];
+const volPhone = [];
+const volAvailability = [];
+const volActivities = [];
 
-const volunteers = [];
-
+// Object to hold all volunteer information
 const volunteerInformation = Object.create({}, {
-
+    volunteerOne: {
+        name: {
+            enumerable: true,
+            writable: false,
+            value: "Joseph Stalin Jr."
+        }, 
+        address: {
+            enumerable: true,
+            writable: false,
+            value: "1235 Best Street way"
+        },
+        email: {
+            enumerable: true,
+            writable: false,
+            value: "jStal@me.com"
+        },
+        phoneNumber: {
+            enumerable: true,
+            writable: false,
+            value: "444-444-4444"
+        },
+        availability: {
+            enumerable: true,
+            writable: false,
+            value: "Phone calls"
+        },
+        activities: {
+            enuemrable: true,
+            writable: false,
+            value: allVolunteerActivities.phoneCalls.value
+        }
+    }
+})
+// Object to hold all volunteer needs of campaigns
+const allVolunteerActivities = Object.create({}, {
+    phoneCalls: {
+        enuemrable: true,
+        writable: false,
+        value: "Calling voters"
+    },
+    takingPolls: {
+        enuemrable: true,
+        writable: false,
+        value: "Taking polls about needs of voter"
+    },
+    doorToDoor: {
+        enuemrable: true,
+        writable: false,
+        value: "Walking neighborhoods and campaigning"
+    }
 })
 
 
