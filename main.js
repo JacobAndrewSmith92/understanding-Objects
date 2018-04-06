@@ -39,34 +39,6 @@ const expenseReport = {
 
 // Three properties to every property: [configurable, enumerable, writable] * Default value is false
 
-const expense = Object.create({}, {
-    dateCreated: {
-        enumerable: true,
-        writable: false,
-        value: "01/01/2017"
-    },
-    location: {
-        enumerable: true,
-        writable: false,
-        value: "Bob's Burgers"
-    },
-    dollarAmount: {
-        enumerable: true,
-        writable: false,
-        value: 14.34
-    },
-    purpose: {
-        enumerable: true,
-        writable: false,
-        value: "Lunch with very important client"
-    },
-    code: {
-        enumerable: false,
-        writable: true,
-        value: "1001A"
-    }
-})
-
 // By default, use Object.create 
 
 
@@ -103,12 +75,12 @@ URL for registering to vote
 */ 
 // Object to hold representative name, district campaigning for, biography, image gallery (head shot, family picture, picture of constituents)
 
-const representativesInfo = Object.create({}, {
+const represetativesInfo = Object.create({}, {
     repOne: {
         name: {
             enumerable: true,
-            writable: false,
-            value: "Elizabeth Sanger"
+            writable: true,
+            name: "Elizabeth Sanger"
         },
         districtRunning: {
             enumerable: true,
@@ -135,15 +107,26 @@ const representativesInfo = Object.create({}, {
                 enumerable: true,
                 writable: false,
                 value: "https://www.cbsnews.com/news/house-republicans-on-recess-face-angry-constituents-at-local-town-halls/"
-            }
+            },
         },
         missionStatement: {
             enumerable: true,
             writable: false,
-            value: "Inspring mission statement here"
+            value: "Inspiring mission statement here"
         }
+    
     }
 })
+const myArray = [];
+const modifyRepInfo = (objectToCall, valueToChange) => {
+    // use a for loop to pulls keys out to compare to the values then print the values
+     representativesInfo.repOne.objectToCall = valueToChange
+}
+
+
+//console.log(representativesInfo.repOne)
+const myVar = representativesInfo.repOne
+console.log(myVar.biography)
 // Object that holds Campaign message and statements
 const platformStatements = Object.create({}, {
     taxes: {
@@ -295,7 +278,7 @@ const volunteerInformation = Object.create({}, {
         activities: {
             enuemrable: true,
             writable: false,
-            value: allVolunteerActivities.phoneCalls.value
+            value: ""//allVolunteerActivities.phoneCalls
         }
     }
 })
