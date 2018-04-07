@@ -75,12 +75,12 @@ URL for registering to vote
 */ 
 // Object to hold representative name, district campaigning for, biography, image gallery (head shot, family picture, picture of constituents)
 
-const represetativesInfo = Object.create({}, {
+const representativesInfo = Object.create({}, {
     repOne: {
         name: {
             enumerable: true,
             writable: true,
-            name: "Elizabeth Sanger"
+            value: "Elizabeth Sanger"
         },
         districtRunning: {
             enumerable: true,
@@ -117,44 +117,45 @@ const represetativesInfo = Object.create({}, {
     
     }
 })
-const myArray = [];
-const modifyRepInfo = (objectToCall, valueToChange) => {
-    // use a for loop to pulls keys out to compare to the values then print the values
-     representativesInfo.repOne.objectToCall = valueToChange
-}
+//console.log(representativesInfo["name"]);
+// const myArray = [];
+// const modifyRepInfo = (objectToCall, valueToChange) => {
+//     // use a for loop to pulls keys out to compare to the values then print the values
+//     representativesInfo.repOne[0].name.name
+// }
 
-
-//console.log(representativesInfo.repOne)
-const myVar = representativesInfo.repOne
-console.log(myVar.biography)
-// Object that holds Campaign message and statements
 const platformStatements = Object.create({}, {
     taxes: {
         enumerable: true,
-        writable: false,
+        writable: true,
         value: "Profound statement on taxes - Lorem ipsum dolor amet gluten-free fingerstache dreamcatcher blue bottle cronut synth. Stumptown la croix lo-fi banh mi drinking vinegar microdosing portland fixie air plant. Tilde af pitchfork, XOXO shoreditch live-edge succulents copper mug gastropub master cleanse biodiesel farm-to-table. Keytar normcore selvage aesthetic food truck vexillologist. Forage fam lyft listicle leggings tattooed biodiesel bicycle rights street art pinterest keffiyeh locavore celiac retro unicorn. Jianbing celiac actually tbh freegan tumeric."
     },
     jobs: {
         enumerable: true,
-        writable: false,
+        writable: true,
         value: "Profound statement on jobs - Lorem ipsum dolor amet cold-pressed drinking vinegar butcher cronut, you probably haven't heard of them wayfarers fingerstache la croix blue bottle activated charcoal. Taxidermy salvia beard gastropub unicorn craft beer asymmetrical cloud bread normcore pabst cliche tbh four loko. Butcher pabst coloring book meh cardigan palo santo wolf iPhone blog sriracha cloud bread fam ramps."
     }, 
     infrastructure: {
         enumerable: true,
-        writable: false,
+        writable: true,
         value: "Profound statement on infrastructure - Bitters mustache artisan mixtape ennui hoodie succulents copper mug actually vexillologist af venmo ramps flannel bushwick. Art party ethical hella, iPhone edison bulb la croix keytar chicharrones meditation four loko pok pok kickstarter."
     }, 
     healthCare: {
         enumerable: true,
-        writable: false,
+        writable: true,
         value: "Profound statement on healthcare - Etsy gastropub chambray drinking vinegar, next level la croix waistcoat leggings raw denim godard PBR&B tofu four loko put a bird on it. Tofu ugh live-edge, next level marfa wayfarers thundercats drinking vinegar chicharrones williamsburg YOLO paleo."
     },
     crimeAndReinforcement: {
         enuemrable: true,
-        writable: false,
+        writable: true,
         value: "Profound statement on crime and reinforcement - Succulents schlitz hot chicken, mumblecore affogato 90's cold-pressed thundercats poutine roof party irony vegan cred. Farm-to-table tumblr forage, drinking vinegar skateboard pour-over pork belly vice wayfarers dreamcatcher scenester vaporware disrupt synth. Seitan master cleanse gluten-free, cardigan ennui street art adaptogen twee 8-bit kinfolk semiotics jean shorts vexillologist." 
     }
 })
+
+
+// const reformatStatements = (key, value) => {
+//     platformStatements = Object.values(platformStatments);
+// }
 // Object to hold website for donation forms & register to vote
 const urls = Object.create({}, {
     donationForms: {
