@@ -76,7 +76,6 @@ URL for registering to vote
 // Object to hold representative name, district campaigning for, biography, image gallery (head shot, family picture, picture of constituents)
 
 const representativesInfo = Object.create({}, {
-    repOne: {
         name: {
             enumerable: true,
             writable: true,
@@ -114,15 +113,11 @@ const representativesInfo = Object.create({}, {
             writable: false,
             value: "Inspiring mission statement here"
         }
-    
-    }
 })
-//console.log(representativesInfo["name"]);
 // const myArray = [];
-// const modifyRepInfo = (objectToCall, valueToChange) => {
-//     // use a for loop to pulls keys out to compare to the values then print the values
-//     representativesInfo.repOne[0].name.name
-// }
+const modifyRepInfo = (key, value) => {
+    representativesInfo[key] = value;
+ }
 
 const platformStatements = Object.create({}, {
     taxes: {
@@ -151,7 +146,10 @@ const platformStatements = Object.create({}, {
         value: "Profound statement on crime and reinforcement - Succulents schlitz hot chicken, mumblecore affogato 90's cold-pressed thundercats poutine roof party irony vegan cred. Farm-to-table tumblr forage, drinking vinegar skateboard pour-over pork belly vice wayfarers dreamcatcher scenester vaporware disrupt synth. Seitan master cleanse gluten-free, cardigan ennui street art adaptogen twee 8-bit kinfolk semiotics jean shorts vexillologist." 
     }
 })
-
+// function to update any platform statement
+const modifyStatementInfo = (topic, newStatement) => {
+    platformStatements[topic] = newStatement;
+}
 
 // const reformatStatements = (key, value) => {
 //     platformStatements = Object.values(platformStatments);
@@ -169,6 +167,11 @@ const urls = Object.create({}, {
         value: "www.anotherwebsitetoregister.com"
     }
 })
+
+const modifyURLS = (key, value) => {
+    urls[key] = value;
+
+}
 // Empty array to hold date of events
 const calendarOfEvents = [];
 // Object representing events on the calendar
