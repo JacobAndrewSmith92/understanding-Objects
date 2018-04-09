@@ -115,8 +115,8 @@ const representativesInfo = Object.create({}, {
         }
 })
 // const myArray = [];
-const modifyRepInfo = (key, value) => {
-    representativesInfo[key] = value;
+const modifyRepInfo = (representative, key, value) => {
+    representative[key] = value;
  }
 
 const platformStatements = Object.create({}, {
@@ -147,8 +147,8 @@ const platformStatements = Object.create({}, {
     }
 })
 // function to update any platform statement
-const modifyStatementInfo = (topic, newStatement) => {
-    platformStatements[topic] = newStatement;
+const modifyStatementInfo = (theStatements, topic, newStatement) => {
+    theStatements[topic] = newStatement;
 }
 
 // const reformatStatements = (key, value) => {
@@ -168,8 +168,8 @@ const urls = Object.create({}, {
     }
 })
 
-const modifyURLS = (key, value) => {
-    urls[key] = value;
+const modifyURLS = (theURL, key, value) => {
+    theURL[key] = value;
 
 }
 // Empty array to hold date of events
@@ -290,29 +290,53 @@ const volunteerInformation = Object.create({}, {
 const allVolunteerActivities = Object.create({}, {
     phoneCalls: {
         enuemrable: true,
-        writable: false,
+        writable: true,
         value: "Calling voters"
     },
     takingPolls: {
         enuemrable: true,
-        writable: false,
+        writable: true,
         value: "Taking polls about needs of voter"
     },
     doorToDoor: {
         enuemrable: true,
-        writable: false,
+        writable: true,
         value: "Walking neighborhoods and campaigning"
     }
 })
 
 
 
+const modifyVolunteerActivities = (theActivity, topic, newStance) => {
+    theActivity[topic] = newStance;
+}
 
+const jest = {
+    title: "The Infinite Jest",
+    author: "David Foster Wallace",
+    publishDate: "1 February 1996"
+}
 
+const lamb = {
+    title: "Lamb: The Gospel According to Biff",
+    author: "Christopher Moore",
+    publishDate: "25 May 2004"
+}
 
+const jestArticle = document.createElement("article")
+//<article>
+jestArticle.setAttribute("id", jest.value)
+// <article id="The Infinite Jest">
+jestArticle.textContent = jest.author
+//<article id="The Infinite Jest">
+// David Foster Wallace 
+// </article>
+const documentBody = document.querySelector("#body");
+documentBody.appendChild(jestArticle);
 
-
-
+const modifyJest = (theObject, theProperty, theNewValue) => {
+    
+}
 
 
 
